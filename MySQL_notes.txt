@@ -1,0 +1,71 @@
+MySQL
+
+Install developer default
+
+user: testuser
+user password password: Lion@king1
+port: 3306
+host: localhost
+servername: MYSQL80
+database: library
+tablename: libraryinfo
+
+
+
+open mysql command line client
+type the root password
+//semicolon ; is very importat for all commands
+// caps letters are optional
+
+SHOW DATABASES;  // list all the databases present
+CREATE DATABASE library; // creates a database
+DROP DATABASE db_name;  // deletes the database
+USE db_name; //for entering into a database
+select database();   // for quering currently used database
+
+**********************  we genrally use INT for numbers and VARCHAR for string datatype *****************
+// string is written in 'single quotes'
+VARCHAR(size) --> size is the num of characters allowed for string
+
+CREATE TABLE table_name(
+   column1 datatype  constraints,
+   column2 datatype  constraints,
+   column3 datatype,
+   .....
+   columnN datatype,
+   PRIMARY KEY( one or more columns )
+);
+//example
+CREATE TABLE libraryinfo(
+   ID   INT              NOT NULL,
+   NAME VARCHAR (20)     NOT NULL,      
+   PRIMARY KEY (ID)
+);
+
+SHOW COLUMNS FROM tablename; // shows the table structure
+DESC tablename;  // shows the table structure
+DROP TABLE tablename;
+SHOW TABLES;
+
+INSERT INTO tablename(column1, column 2)
+VALUES(value1,value2),
+(value1,value2),
+(value1,value2);  // follow the order of the column order for values
+
+SELECT * FROM tablename; // shows all rows
+
+SHOW WARNINGS; // shows all the warnings raised for command executed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
